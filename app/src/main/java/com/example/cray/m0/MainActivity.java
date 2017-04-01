@@ -1,5 +1,6 @@
 package com.example.cray.m0;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -18,13 +20,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
    //     mHelloTextView = (TextView) findViewById(R.id.t1);
- //       ArrayList<String> dateStrings = new ArrayList<String>();  // ArrayList of strings
-//        String[] hourss = {"5:40", "5:54", "6:06", "6:18", "6:29", "6:40", "6:51", "6:59", "7:05", "7:11", "7:17", "7:24", "7:31", "7:38", "7:45", "7:52", "8:00", "8:08", "8:17", "8:25", "8:32", "8:40", "8:49", "8:57", "9:07", "9:18", "9:29", "9:40", "9:51", "10:02", "10:13", "10:29", "10:45", "11:01", "11:17", "11:33", "11:44", "12:05", "12:21", "12:37", "12:53", "13:09", "13:25", "13:41", "13:57", "14:13", "14:29", "14:46", "14:59", "15:10", "15:21", "15:32", "15:43", "15:54", "16:05", "16:16", "16:27", "16:38", "16:49", "17:00", "17:11", "17:22", "17:33", "17:44", "17:55", "18:06", "18:17", "18:28", "18:39", "18:49", "19:01", "19:12", "19:21", "19:37", "19:53", "20:09", "20:25", "20:41", "20:57", "21:13", "21:29", "21:45", "22:01", "22:17", "22:33", "22:49", "23:05"};
     }
     public void onMyButtonClick(View view)
     {
         // выводим сообщение
+ //       String[] mTestArray;
+        //mTestArray = getResources().getStringArray(R.array.media_names);
+//        List<String> Lines = Arrays.asList(getResources().getStringArray(R.array.media_names));
+ //       Lines.add(5,"wwwww");
+
+        Resources res = getResources();
+        String[] planets = res.getStringArray(R.array.media_names);
         ArrayList<String> dateStrings = new ArrayList<String>();  // ArrayList of strings
         String[] hourss = {"5:43", "6:00", "6:16", "6:32", "6:48", "7:04", "7:20", "7:36", "7:52", "8:09", "8:24", "8:40", "8:56", "9:12", "9:28", "9:44", "10:00", "10:16", "10:32", "10:48", "11:04", "11:20", "11:36", "11:52", "12:08", "12:24", "12:40", "12:56", "13:12", "13:28", "13:44", "14:00", "14:16", "14:32", "14:48", "15:04", "15:21", "15:37", "15:54", "16:10", "16:27", "16:43", "16:59", "17:15", "17:31", "17:47", "18:03", "18:19", "18:35", "18:51", "19:07", "19:23", "19:39", "19:55", "20:11", "20:27", "20:43", "20:59", "21:15", "21:31", "21:47", "22:03", "22:19", "22:35", "22:51", "23:07"};
         for (String item: hourss) {
